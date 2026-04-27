@@ -211,6 +211,12 @@ body {
   line-height: 1.8;
 }
 
+.about-lead {
+  font-size: clamp(1.06rem, 0.45vw + 0.96rem, 1.2rem);
+  line-height: 1.95;
+  color: #c4dbef;
+}
+
 .hero-contacts {
   display: flex;
   flex-wrap: wrap;
