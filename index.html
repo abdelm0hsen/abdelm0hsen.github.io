@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Abdelmohsen Hussien - Junior Cybersecurity Analyst and SOC Analyst portfolio.">
+  <meta name="keywords" content="Cybersecurity, SOC Analyst, Incident Response, Network Security, Python">
+  <meta name="author" content="Abdelmohsen Hussien">
+  <title>Abdelmohsen Hussien | Cybersecurity Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cyberBlue: '#1cc7ff',
+            cyberGreen: '#27ffbf',
+            cyberDark: '#07111f',
+            cyberPanel: '#0a1a2f'
+          },
+          fontFamily: {
+            heading: ['Chakra Petch', 'sans-serif'],
+            body: ['Sora', 'sans-serif']
+          },
+          boxShadow: {
+            neon: '0 0 0.8rem rgba(28, 199, 255, 0.5), 0 0 1.5rem rgba(39, 255, 191, 0.2)'
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-body text-slate-100">
+  <div class="site-bg-glow" aria-hidden="true"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <header id="home">
+    <nav id="mainNav" class="navbar-shell fixed top-0 left-0 right-0 z-50">
+      <div class="container py-3">
+        <div class="d-flex justify-content-between align-items-center gap-3">
+          <a href="#home" class="brand-link d-inline-flex align-items-center gap-2 text-decoration-none">
+            <span class="brand-icon"><i class="fa-solid fa-shield-halved"></i></span>
+            <span class="brand-text">AH / SOC</span>
+          </a>
+
+          <ul class="d-none d-lg-flex list-unstyled m-0 gap-4 align-items-center">
+            <li><a class="nav-link-custom nav-link" href="#about">About</a></li>
+            <li><a class="nav-link-custom nav-link" href="#skills">Skills</a></li>
+            <li><a class="nav-link-custom nav-link" href="#experience">Experience</a></li>
+            <li><a class="nav-link-custom nav-link" href="#projects">Projects</a></li>
+            <li><a class="nav-link-custom nav-link" href="#contact">Contact</a></li>
+          </ul>
+
+          <button id="menuToggle" class="menu-toggle d-lg-none" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobileMenu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu d-lg-none mt-3 hidden">
+          <a class="mobile-link" href="#about">About</a>
+          <a class="mobile-link" href="#skills">Skills</a>
+          <a class="mobile-link" href="#experience">Experience</a>
+          <a class="mobile-link" href="#projects">Projects</a>
+          <a class="mobile-link" href="#education">Education</a>
+          <a class="mobile-link" href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section min-vh-100 d-flex align-items-center">
+      <div class="container pt-5">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-7 reveal">
+            <span class="eyebrow mb-3 d-inline-flex align-items-center gap-2">
+              <i class="fa-solid fa-signal"></i>
+              Security Monitoring | Incident Triage | Threat Awareness
+            </span>
+            <h1 class="hero-title mb-3">Abdelmohsen Hussien</h1>
+            <p class="hero-subtitle mb-3">Junior Cybersecurity Analyst / SOC Analyst</p>
+            <p class="hero-summary mb-4">
+              Results-driven Junior Cybersecurity Analyst with a strong academic background in cybersecurity and hands-on
+              experience in security analysis, Python automation, and threat detection. Skilled in identifying vulnerabilities,
+              analyzing network traffic, and implementing security controls.
+            </p>
+
+            <div class="hero-contacts mb-4">
+              <span class="contact-pill"><i class="fa-solid fa-location-dot"></i>Alexandria, Egypt</span>
+              <a href="tel:+201067470889" class="contact-pill contact-pill-link"><i class="fa-solid fa-phone"></i>+20 1067470889</a>
+              <a href="mailto:abdelmohsenhussien142@gmail.com" class="contact-pill contact-pill-link"><i class="fa-solid fa-envelope"></i>abdelmohsenhussien142@gmail.com</a>
+            </div>
+
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#projects" class="btn btn-cyber-primary"><i class="fa-solid fa-code me-2"></i>View Projects</a>
+              <a href="assets/abdelmohsen-hussien-cv.pdf" class="btn btn-cyber-outline" download><i class="fa-solid fa-file-arrow-down me-2"></i>Download CV</a>
+              <a href="#contact" class="btn btn-cyber-soft"><i class="fa-solid fa-paper-plane me-2"></i>Contact</a>
+            </div>
+          </div>
+
+          <div class="col-lg-5 reveal">
+            <div class="glass-card hero-panel p-4">
+              <div class="profile-frame mb-4">
+                <img src="assets/abdelmohsen-hussien.jpg" alt="Portrait of Abdelmohsen Hussien" class="profile-photo">
+              </div>
+              <h2 class="panel-title mb-4"><i class="fa-solid fa-radar me-2"></i>Security Snapshot</h2>
+              <div class="d-grid gap-3">
+                <div class="metric-row">
+                  <span>Threat Detection</span>
+                  <strong>Log Correlation & Alert Triage</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Lab Platforms</span>
+                  <strong>TryHackMe | Hack The Box</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Core Focus</span>
+                  <strong>Network Security & Incident Response</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Internship</span>
+                  <strong>CyberGuard Integrated Solutions LLC (60 hours)</strong>
+                </div>
+              </div>
+              <div class="status-pill mt-4">
+                <i class="fa-solid fa-circle-check me-2"></i>
+                Achieved 100% Final Evaluation Score
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="about" class="py-24">
+      <div class="container">
+        <div class="section-head reveal mb-5">
+          <p class="section-kicker">About</p>
+          <h2 class="section-title">Security-Driven Mindset With Hands-On Project Practice</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-7 reveal">
+            <div class="glass-card p-4 p-md-5 h-100">
+              <p class="mb-0 leading-relaxed text-slate-300">
+                Passionate about SOC operations, incident response, and protecting digital infrastructures, I combine academic knowledge
+                with practical project work in encryption, intrusion detection, authentication systems, and network monitoring. I focus on
+                building defensive solutions that improve detection speed, investigation quality, and operational readiness.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-5 reveal">
+            <div class="glass-card p-4 p-md-5 h-100">
+              <h3 class="card-mini-title mb-3">Professional Highlights</h3>
+              <ul class="list-unstyled m-0 d-grid gap-3 highlight-list">
+                <li><i class="fa-solid fa-check"></i>Threat analysis, vulnerability assessment, and network security monitoring.</li>
+                <li><i class="fa-solid fa-check"></i>Practical log analysis for brute-force and suspicious activity identification.</li>
+                <li><i class="fa-solid fa-check"></i>Python-based automation for security scripts and monitoring workflows.</li>
+                <li><i class="fa-solid fa-check"></i>Hands-on labs through TryHackMe and Hack The Box environments.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="py-24">
+      <div class="container">
+        <div class="section-head reveal mb-5">
+          <p class="section-kicker">Skills</p>
+          <h2 class="section-title">Core Technical Stack</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-3 reveal">
+            <div class="glass-card p-4 skill-card h-100">
+              <h3 class="card-mini-title mb-3"><i class="fa-solid fa-user-shield me-2"></i>Cybersecurity</h3>
+              <div class="chip-wrap">
+                <span class="chip">SOC Fundamentals</span>
+                <span class="chip">Threat Analysis</span>
+                <span class="chip">Vulnerability Assessment</span>
+                <span class="chip">Incident Response</span>
+                <span class="chip">Brute Force Detection</span>
+                <span class="chip">Penetration Testing Fundamentals</span>
+                <span class="chip">Log Analysis</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-3 reveal">
+            <div class="glass-card p-4 skill-card h-100">
+              <h3 class="card-mini-title mb-3"><i class="fa-solid fa-network-wired me-2"></i>Networking</h3>
+              <div class="chip-wrap">
+                <span class="chip">TCP/IP & OSI Model</span>
+                <span class="chip">Network Protocols</span>
+                <span class="chip">Packet Inspection</span>
+                <span class="chip">Traffic Analysis</span>
+                <span class="chip">Network Security Monitoring</span>
+                <span class="chip">Log Correlation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-3 reveal">
+            <div class="glass-card p-4 skill-card h-100">
+              <h3 class="card-mini-title mb-3"><i class="fa-brands fa-python me-2"></i>Python</h3>
+              <div class="chip-wrap">
+                <span class="chip">Automation Scripts</span>
+                <span class="chip">Data Parsing</span>
+                <span class="chip">Security Scripts</span>
+                <span class="chip">Flask Basics</span>
+                <span class="chip">Security Utilities</span>
+                <span class="chip">CLI Tools</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-3 reveal">
+            <div class="glass-card p-4 skill-card h-100">
+              <h3 class="card-mini-title mb-3"><i class="fa-solid fa-screwdriver-wrench me-2"></i>Tools</h3>
+              <div class="chip-wrap">
+                <span class="chip">Kali Linux</span>
+                <span class="chip">Wireshark</span>
+                <span class="chip">TryHackMe</span>
+                <span class="chip">Hack The Box</span>
+                <span class="chip">Linux Hardening</span>
+                <span class="chip">Network Scanning</span>
+                <span class="chip">Git & GitHub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="py-24">
+      <div class="container">
+        <div class="section-head reveal mb-5">
+          <p class="section-kicker">Experience</p>
+          <h2 class="section-title">Practical SOC-Oriented Experience</h2>
+        </div>
+
+        <div class="timeline reveal">
+          <article class="timeline-item glass-card p-4 p-md-5">
+            <div class="d-flex flex-wrap justify-content-between gap-3 mb-3">
+              <h3 class="card-mini-title m-0">Cybersecurity Trainee - CyberGuard Integrated Solutions LLC</h3>
+              <span class="timeline-date">Jul 2025 - Sep 2025</span>
+            </div>
+            <ul class="exp-list m-0">
+              <li>Completed 60-hour cybersecurity training focused on Python automation.</li>
+              <li>Built scripts for log analysis and continuous monitoring workflows.</li>
+              <li>Applied security concepts in practical, scenario-based investigations.</li>
+              <li>Achieved 100% final evaluation score.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item glass-card p-4 p-md-5 mt-4">
+            <div class="d-flex flex-wrap justify-content-between gap-3 mb-3">
+              <h3 class="card-mini-title m-0">Electrical Training Intern - Alexandria Electricity Distribution Company</h3>
+              <span class="timeline-date">Aug 2024</span>
+            </div>
+            <ul class="exp-list m-0">
+              <li>Studied power systems and operational infrastructure.</li>
+              <li>Analyzed workflows and technical operations in a production setting.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-24">
+      <div class="container">
+        <div class="section-head reveal mb-5">
+          <p class="section-kicker">Projects</p>
+          <h2 class="section-title">Featured Work</h2>
+        </div>
+
+        <div class="project-category reveal mb-4">
+          <h3 class="category-title"><i class="fa-solid fa-lock me-2"></i>Cybersecurity Projects</h3>
+        </div>
+        <div class="row g-4 mb-5">
+          <div class="col-md-6 col-xl-4 reveal">
+            <article class="glass-card project-card p-4 h-100">
+              <h4 class="project-title">Network Traffic Log Analysis</h4>
+              <p>Analyzes packet logs to identify suspicious behavior and traffic anomalies in network datasets.</p>
+              <div class="chip-wrap mb-4">
+                <span class="chip">Python</span><span class="chip">Network Security</span><span class="chip">CSV Analysis</span>
+              </div>
+              <a href="#" class="project-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-4 reveal">
+            <article class="glass-card project-card p-4 h-100">
+              <h4 class="project-title">Brute Force Detection Log Analyzer</h4>
+              <p>Parses authentication logs and flags repeated failed login attempts for rapid threat visibility.</p>
+              <div class="chip-wrap mb-4">
+                <span class="chip">Log Analysis</span><span class="chip">SOC</span><span class="chip">Detection</span>
+              </div>
+              <a href="#" class="project-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-4 reveal">
+            <article class="glass-card project-card p-4 h-100">
+              <h4 class="project-title">Secure Login System</h4>
+              <p>Implements secure authentication flows with password handling and defensive coding practices.</p>
+              <div class="chip-wrap mb-4">
+                <span class="chip">Authentication</span><span class="chip">Web Security</span><span class="chip">Flask</span>
+              </div>
+              <a href="#" class="project-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-4 reveal">
+            <article class="glass-card project-card p-4 h-100">
+              <h4 class="project-title">Phishing Simulation Tool</h4>
+              <p>Simulates phishing page behavior for awareness training and detection understanding in controlled contexts.</p>
+              <div class="chip-wrap mb-4">
+                <span class="chip">Awareness</span><span class="chip">Email Security</span><span class="chip">Simulation</span>
+              </div>
+              <a href="#" class="project-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-4 reveal">
+            <article class="glass-card project-card p-4 h-100">
+              <h4 class="project-title">File Encryption & Decryption System</h4>
+              <p>Provides a practical utility to encrypt and decrypt files using secure handling approaches.</p>
+              <div class="chip-wrap mb-4">
+                <span class="chip">Cryptography</span><span class="chip">Python</span><span class="chip">Data Protection</span>
+              </div>
+              <a href="#" class="project-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+          </div>
+        </div>
+
+        <div class="project-category reveal mb-4">
+          <h3 class="category-title"><i class="fa-solid fa-robot me-2"></i>AI Projects</h3>
+        </div>
+        <div class="row g-4 mb-5">
+          <div class="col-md-6 col-xl-4 reveal">
+            <article class="glass-card project-card p-4 h-100">
+              <h4 class="project-title">AI-Powered Humanoid Robot</h4>
+              <p>Combined computer vision and automation modules to support intelligent action workflows.</p>
+              <div class="chip-wrap mb-4">
+                <span class="chip">AI</span><span class="chip">Computer Vision</span><span class="chip">Automation</span>
+              </div>
+              <a href="#" class="project-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-4 reveal">
+            <article class="glass-card project-card p-4 h-100">
+              <h4 class="project-title">Face Recognition with OpenCV</h4>
+              <p>Detects and recognizes known faces using OpenCV and a local face dataset.</p>
+              <div class="chip-wrap mb-4">
+                <span class="chip">OpenCV</span><span class="chip">Computer Vision</span><span class="chip">Python</span>
+              </div>
+              <a href="#" class="project-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-4 reveal">
+            <article class="glass-card project-card p-4 h-100">
+              <h4 class="project-title">Cats vs Dogs Image Classifier</h4>
+              <p>Image classification workflow for distinguishing between cats and dogs with model-driven predictions.</p>
+              <div class="chip-wrap mb-4">
+                <span class="chip">Machine Learning</span><span class="chip">Image Classification</span><span class="chip">AI</span>
+              </div>
+              <a href="#" class="project-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-4 reveal">
+            <article class="glass-card project-card p-4 h-100">
+              <h4 class="project-title">Smart Assistant Voice Commands</h4>
+              <p>Voice-enabled assistant application that maps speech commands to practical actions.</p>
+              <div class="chip-wrap mb-4">
+                <span class="chip">Speech Processing</span><span class="chip">Automation</span><span class="chip">Python</span>
+              </div>
+              <a href="#" class="project-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+          </div>
+        </div>
+
+        <div class="project-category reveal mb-4">
+          <h3 class="category-title"><i class="fa-solid fa-terminal me-2"></i>Programming Projects</h3>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-4 reveal">
+            <article class="glass-card project-card p-4 h-100">
+              <h4 class="project-title">Blockchain Implementation</h4>
+              <p>Educational blockchain model demonstrating block validation and chain structure logic.</p>
+              <div class="chip-wrap mb-4">
+                <span class="chip">Data Structures</span><span class="chip">Python</span><span class="chip">Blockchain</span>
+              </div>
+              <a href="#" class="project-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-4 reveal">
+            <article class="glass-card project-card p-4 h-100">
+              <h4 class="project-title">DFS & BFS Algorithms</h4>
+              <p>Graph traversal implementations with practical examples and clear algorithmic workflows.</p>
+              <div class="chip-wrap mb-4">
+                <span class="chip">Algorithms</span><span class="chip">Graphs</span><span class="chip">Python</span>
+              </div>
+              <a href="#" class="project-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-4 reveal">
+            <article class="glass-card project-card p-4 h-100">
+              <h4 class="project-title">Student Grades Analysis</h4>
+              <p>Reads and analyzes grade data to produce structured insights and output summaries.</p>
+              <div class="chip-wrap mb-4">
+                <span class="chip">Data Analysis</span><span class="chip">CSV</span><span class="chip">Python</span>
+              </div>
+              <a href="#" class="project-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-4 reveal">
+            <article class="glass-card project-card p-4 h-100">
+              <h4 class="project-title">Password Strength Checker</h4>
+              <p>Checks password complexity against practical strength rules and feedback criteria.</p>
+              <div class="chip-wrap mb-4">
+                <span class="chip">Validation</span><span class="chip">Security Utility</span><span class="chip">CLI</span>
+              </div>
+              <a href="#" class="project-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-4 reveal">
+            <article class="glass-card project-card p-4 h-100">
+              <h4 class="project-title">Small Utility Applications</h4>
+              <p>A collection of lightweight Python apps focused on practical daily-use automation.</p>
+              <div class="chip-wrap mb-4">
+                <span class="chip">Utilities</span><span class="chip">Productivity</span><span class="chip">Python</span>
+              </div>
+              <a href="#" class="project-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="py-24">
+      <div class="container">
+        <div class="section-head reveal mb-5">
+          <p class="section-kicker">Education</p>
+          <h2 class="section-title">Academic Foundation</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6 reveal">
+            <article class="glass-card p-4 p-md-5 h-100">
+              <h3 class="card-mini-title mb-3">Bachelor of Computer Science & Artificial Intelligence</h3>
+              <p class="mb-1 text-slate-300"><strong>Pharos University in Alexandria</strong></p>
+              <p class="mb-1 text-slate-300">Major: Cybersecurity</p>
+              <p class="mb-0 text-slate-300">2022 - 2026</p>
+            </article>
+          </div>
+          <div class="col-lg-6 reveal">
+            <article class="glass-card p-4 p-md-5 h-100">
+              <h3 class="card-mini-title mb-3">Relevant Coursework</h3>
+              <div class="chip-wrap">
+                <span class="chip">Computer Networks</span>
+                <span class="chip">Operating Systems</span>
+                <span class="chip">Cryptography</span>
+                <span class="chip">Network Forensics</span>
+                <span class="chip">Information Security</span>
+                <span class="chip">Secure Software Development</span>
+                <span class="chip">Cloud Computing</span>
+                <span class="chip">IoT</span>
+                <span class="chip">Data Integrity & Authentication</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="volunteer" class="py-24">
+      <div class="container">
+        <div class="section-head reveal mb-5">
+          <p class="section-kicker">Volunteer Experience</p>
+          <h2 class="section-title">Community Contribution</h2>
+        </div>
+
+        <div class="reveal">
+          <article class="glass-card p-4 p-md-5">
+            <h3 class="card-mini-title mb-3">Volunteer Member - Kheir Team, Pharos University</h3>
+            <p class="mb-0 text-slate-300">
+              Participated in charity campaigns and community initiatives while developing strong teamwork,
+              communication, and collaboration skills.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="languages" class="py-24">
+      <div class="container">
+        <div class="section-head reveal mb-5">
+          <p class="section-kicker">Languages</p>
+          <h2 class="section-title">Communication</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 reveal">
+            <article class="glass-card p-4 h-100 d-flex align-items-center justify-content-between">
+              <span class="card-mini-title m-0"><i class="fa-solid fa-language me-2"></i>Arabic</span>
+              <span class="lang-level">Native</span>
+            </article>
+          </div>
+          <div class="col-md-6 reveal">
+            <article class="glass-card p-4 h-100 d-flex align-items-center justify-content-between">
+              <span class="card-mini-title m-0"><i class="fa-solid fa-language me-2"></i>English</span>
+              <span class="lang-level">Good</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-24">
+      <div class="container">
+        <div class="section-head reveal mb-5">
+          <p class="section-kicker">Contact</p>
+          <h2 class="section-title">Let&apos;s Build Secure Systems Together</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-7 reveal">
+            <div class="glass-card p-4 p-md-5 h-100">
+              <p class="mb-4 text-slate-300">
+                I am actively seeking opportunities as a Junior SOC Analyst or Cybersecurity Analyst.
+                If you are hiring or would like to collaborate on security-focused projects, feel free to reach out.
+              </p>
+              <div class="contact-grid">
+                <a href="mailto:abdelmohsenhussien142@gmail.com" class="contact-item">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span>abdelmohsenhussien142@gmail.com</span>
+                </a>
+                <a href="tel:+201067470889" class="contact-item">
+                  <i class="fa-solid fa-phone"></i>
+                  <span>+20 1067470889</span>
+                </a>
+                <a href="#" class="contact-item">
+                  <i class="fa-brands fa-linkedin"></i>
+                  <span>LinkedIn Profile</span>
+                </a>
+                <a href="https://github.com/abdelm0hsen" class="contact-item" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-github"></i>
+                  <span>github.com/abdelm0hsen</span>
+                </a>
+                <a href="assets/abdelmohsen-hussien-cv.pdf" class="contact-item" download>
+                  <i class="fa-solid fa-file-arrow-down"></i>
+                  <span>Download CV (PDF)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 reveal">
+            <div class="glass-card p-4 p-md-5 h-100">
+              <h3 class="card-mini-title mb-3">Quick Details</h3>
+              <ul class="list-unstyled m-0 d-grid gap-3 quick-details">
+                <li><i class="fa-solid fa-location-dot"></i>Based in Alexandria, Egypt</li>
+                <li><i class="fa-solid fa-briefcase"></i>Open to full-time and internship opportunities</li>
+                <li><i class="fa-solid fa-shield"></i>Career focus: SOC, blue team, and defensive operations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4">
+    <div class="container text-center">
+      <p class="mb-0 footer-text">&copy; <span id="year"></span> Abdelmohsen Hussien. Built for GitHub Pages deployment.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
