@@ -1,0 +1,9 @@
+# Deploy only the GitHub Pages site files
+*
+!.gitignore
+!.nojekyll
+!index.html
+!style.css
+!script.js
+!assets/
+!assets/**
